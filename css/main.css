@@ -1,3 +1,24 @@
+@media only screen and (max-width: 1440px)
+{
+    .pure-u-1-5{
+        width: 25% !important;
+    }
+    .pure-u-1-8{
+        width: 12% !important;
+    }
+
+}
+@media only screen and (max-width: 1280px)
+{
+    .pure-u-1-5{
+        width: 33% !important;
+    }
+    .pure-u-1-8{
+        width: 0% !important;
+    }
+
+}
+
 body, html{
     margin: 0;
     height: 100%;
