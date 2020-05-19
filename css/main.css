@@ -156,6 +156,11 @@ a:hover{
     background-color:#199A8D; 
 }
 
+#ncrplogo{
+	position:absolute;
+	left:0;
+	bottom:0;
+}
 
 input{
     border-radius: 5px;

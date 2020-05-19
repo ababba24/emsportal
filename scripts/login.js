@@ -1,5 +1,5 @@
 function fto(){
-    var passcode = "V201U2RrNUhlRFZhYlZVOQ==";
+    var passcode = "V201U2RtSkhPVzVoVnpROQ==";
     var ftoForm = document.getElementById("fto-login");
     var textareaList = ftoForm.getElementsByTagName("input");
     var textareaText = textareaList[0].value;
@@ -23,7 +23,7 @@ function fto(){
 }
 
 function command(){
-    var passcode = "V1RJNWRHSlhSblZhUnpnOQ==";
+    var passcode = "WW0xT2VXTkhlSHBhYlZFOQ==";
     var commandForm = document.getElementById("command-login");
     var textareaList = commandForm.getElementsByTagName("input");
     var textareaText = textareaList[0].value;
