@@ -15,7 +15,7 @@ function fto(){
         var d = new Date();
         var cname = "fto";
         var cvalue = "true";
-        d.setFullYear(d.getFullYear() + 1);
+        d.setTime(d.getTime() + (7*24*60*60*1000));
         var expires = "expires="+d.toUTCString();
         document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
         location.reload();
@@ -40,7 +40,7 @@ function command(){
         var d = new Date();
         var cname = "command";
         var cvalue = "true";
-        d.setFullYear(d.getFullYear() + 1);
+        d.setTime(d.getTime() + (7*24*60*60*1000));
         var expires = "expires="+d.toUTCString();
         document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
         location.reload();

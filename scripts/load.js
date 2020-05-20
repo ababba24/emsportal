@@ -3,6 +3,9 @@ function getCookie(cname)
     var name = cname + "=";
     var decodedCookie = decodeURIComponent(document.cookie)
     var ca = decodedCookie.split(";");
+	
+	alert(ca);
+	
     for(var i = 0; i < ca.length; i++) 
     {
         var c = ca[i];
@@ -53,3 +56,6 @@ function loadBackground()
     var bg = document.getElementById("bg");
     bg.style.backgroundImage = image_name;
 }
+//check date of cookie
+//set cookie every time load
+//make cookie last one month
