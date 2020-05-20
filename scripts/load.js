@@ -1,7 +1,7 @@
 function getCookie(cname)
 {
     var name = cname + "=";
-	var cookie = getCookie(cname);
+	var cookie = getCookie2(cname);
 	alert(cookie);
     var decodedCookie = decodeURIComponent(document.cookie)
 	alert(name);
@@ -64,7 +64,7 @@ function loadBackground()
 }
 
 
-function getCookie(name) {
+function getCookie2(name) {
     // Split cookie string and get all individual name=value pairs in an array
     var cookieArr = document.cookie.split(";");
     
