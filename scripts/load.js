@@ -1,11 +1,7 @@
 function getCookie(cname)
 {
     var name = cname + "=";
-	var cookie = getCookie2(cname);
-	alert(cookie);
     var decodedCookie = decodeURIComponent(document.cookie)
-	alert(name);
-	alert(decodedCookie);
     var ca = decodedCookie.split(";");
 	
 	
@@ -30,14 +26,15 @@ function getCookie(cname)
 function checkLoad() 
 {
     loadBackground();
-    var fto = getCookie("fto");
+    var fto = getCookie("fto-ncrp");
     if(fto != "")
     {
         fto = new Boolean(true);
     }
-    var command = getCookie("command");
+    var command = getCookie("command-ncrp");
     if(command !="")
     {
+		
         command = new Boolean(true);
     }
     //if not command & not fto, del boxes
@@ -55,31 +52,20 @@ function checkLoad()
     }
 }
 
+function UpdateCookie(cookie_name)
+{
+	var d = new Date();
+	var cname = cookie_name + "-ncrp";
+	var cvalue = "true";
+	d.setTime(d.getTime() + (7*24*60*60*1000));
+	var expires = "expires="+d.toUTCString();
+	document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
 function loadBackground()
 {
     var x = Math.floor(Math.random() * 27) + 1;
     var image_name = "url('assets/backgrounds/" + x.toString() + ".png')";
     var bg = document.getElementById("bg");
     bg.style.backgroundImage = image_name;
-}
-
-
-function getCookie2(name) {
-    // Split cookie string and get all individual name=value pairs in an array
-    var cookieArr = document.cookie.split(";");
-    
-    // Loop through the array elements
-    for(var i = 0; i < cookieArr.length; i++) {
-        var cookiePair = cookieArr[i].split("=");
-        
-        /* Removing whitespace at the beginning of the cookie name
-        and compare it with the given string */
-        if(name == cookiePair[0].trim()) {
-            // Decode the cookie value and return
-            return decodeURIComponent(cookiePair[1]);
-        }
-    }
-    
-    // Return null if not found
-    return null;
 }

@@ -13,7 +13,7 @@ function fto(){
     if(passcode == password)
     {
         var d = new Date();
-        var cname = "fto";
+        var cname = "fto-ncrp";
         var cvalue = "true";
         d.setTime(d.getTime() + (7*24*60*60*1000));
         var expires = "expires="+d.toUTCString();
@@ -38,7 +38,7 @@ function command(){
     if(passcode == password)
     {
         var d = new Date();
-        var cname = "command";
+        var cname = "command-ncrp";
         var cvalue = "true";
         d.setTime(d.getTime() + (7*24*60*60*1000));
         var expires = "expires="+d.toUTCString();
