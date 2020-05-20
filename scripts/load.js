@@ -56,7 +56,7 @@ function checkLoad()
 function UpdateCookie(cookie_name)
 {
 	var d = new Date();
-	var cname = cookie_name + "-ncrp";
+	var cname = cookie_name;
 	var cvalue = "true";
 	d.setTime(d.getTime() + (7*24*60*60*1000));
 	var expires = "expires="+d.toUTCString();
