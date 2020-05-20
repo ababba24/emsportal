@@ -29,12 +29,13 @@ function checkLoad()
     var fto = getCookie("fto-ncrp");
     if(fto != "")
     {
+		UpdateCookie("fto-ncrp");
         fto = new Boolean(true);
     }
     var command = getCookie("command-ncrp");
     if(command !="")
     {
-		
+		UpdateCookie("command-ncrp");
         command = new Boolean(true);
     }
     //if not command & not fto, del boxes
