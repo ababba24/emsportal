@@ -1,6 +1,8 @@
 function getCookie(cname)
 {
     var name = cname + "=";
+	var cookie = getCookie(cname);
+	alert(cookie);
     var decodedCookie = decodeURIComponent(document.cookie)
 	alert(name);
 	alert(decodedCookie);
@@ -21,6 +23,9 @@ function getCookie(cname)
     }
     return "";
 }
+//check date of cookie
+//set cookie every time load
+//make cookie last one month
 
 function checkLoad() 
 {
@@ -57,6 +62,24 @@ function loadBackground()
     var bg = document.getElementById("bg");
     bg.style.backgroundImage = image_name;
 }
-//check date of cookie
-//set cookie every time load
-//make cookie last one month
+
+
+function getCookie(name) {
+    // Split cookie string and get all individual name=value pairs in an array
+    var cookieArr = document.cookie.split(";");
+    
+    // Loop through the array elements
+    for(var i = 0; i < cookieArr.length; i++) {
+        var cookiePair = cookieArr[i].split("=");
+        
+        /* Removing whitespace at the beginning of the cookie name
+        and compare it with the given string */
+        if(name == cookiePair[0].trim()) {
+            // Decode the cookie value and return
+            return decodeURIComponent(cookiePair[1]);
+        }
+    }
+    
+    // Return null if not found
+    return null;
+}
