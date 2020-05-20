@@ -2,9 +2,10 @@ function getCookie(cname)
 {
     var name = cname + "=";
     var decodedCookie = decodeURIComponent(document.cookie)
+	alert(name);
+	alert(decodedCookie);
     var ca = decodedCookie.split(";");
 	
-	alert(ca);
 	
     for(var i = 0; i < ca.length; i++) 
     {
